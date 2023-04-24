@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Podcast App</title>
+  <link href="https://fonts.googleapis.com/css?family=Monda&display=swap" rel="stylesheet">
+  <link href="hstyle.css" rel="stylesheet">
+  
+</head>
+<body>
+  <div class="bg">
+    <nav>
+        <div class="logo">
+          <img src="https://i.ibb.co/T211xz8/Picsart-23-04-22-02-56-15-612.png" alt="Logo1" style="background-color: transparent;">
+        </div>
+        
+      <div class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="sidenav">
+        <a href="#" class="active">Home</a>
+        <a href="#">Popular Podcasts</a>
+        <a href="#">Categories</a>
+        <a href="#">My Podcasts</a>
+        <a href="#">Settings</a>
+        <a href="#">Admin</a>
+        
+      </div>
+    </nav>
+  </div>
+
+  <div class="search-container">
+    <form>
+      <input type="text" placeholder="Search...">
+      <button type="submit">Go</button>
+    </form>
+    <h1>Find Your Favorite Podcasts</h1>
+   
+  </div>
+
+  <script>
+    var menuIcon = document.querySelector('.menu-icon');
+    var sideNav = document.querySelector('.sidenav');
+    var closeBtn = document.querySelector('.closebtn');
+    var navLinks = document.querySelectorAll('.sidenav a');
+
+    menuIcon.addEventListener('click', function() {
+      menuIcon.classList.toggle('active');
+      sideNav.classList.toggle('active');
+      sideNav.style.width = (sideNav.style.width === '250px') ? '0' : '250px';
+    });
+
+    closeBtn.addEventListener('click', function() {
+      menuIcon.classList.toggle('active');
+      sideNav.style.width = '0';
+    });
+    navLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        navLinks.forEach(function(link) {
+          link.classList.remove('active');
+        });
+        this.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

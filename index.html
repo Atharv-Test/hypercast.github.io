@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Podcast App</title>
+  <link href="https://fonts.googleapis.com/css?family=Monda&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  
+
+</head>
+<body>
+  
+  <div class="bg">
+    <nav>
+      <div class="logo">
+        <img src="https://i.ibb.co/T211xz8/Picsart-23-04-22-02-56-15-612.png" alt="Logo1" style="background-color: transparent;">
+      </div>
+      <ul class="nav-links">
+        <li id="login"><a href="#">LOGIN</a></li>
+        <li id="signup"><a href="#">SIGN UP</a></li>
+      </ul>
+    </nav>
+    <div class="big-image">
+      <img src="https://i.ibb.co/ZGbN34C/1682111547320.png" alt="Podcast Image">
+      <h1>Discover your new favorite podcast</h1>
+    </div>
+    <div class="image-container">
+      <img src="https://i.ibb.co/M58WVrf/20221212-180422.png" alt="your image description">
+      <div class="image-text">
+        A HYPER'S EMPIRE venture providing digital podcast services
+      </div>
+      <div id="signup-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <img src="https://i.ibb.co/T211xz8/Picsart-23-04-22-02-56-15-612.png" alt="Logo">
+          <h2 class="modal-title">Sign Up</h2>
+          <form>
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" id="username" name="username">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+              <label for="password">Create Password</label>
+              <input type="password" id="password" name="password">
+            </div>
+            <div class="form-group">
+              <label for="confirm-password">Confirm Password</label>
+              <input type="password" id="confirm-password" name="confirm-password">
+            </div>
+            <div class = "form-group">
+              <button type="button" id="signupb">SIGN UP</button>
+          
+            </div>
+            
+          </form>
+          <p>Already have a Hypercast account? <a href="#" id="login-link"> Log in</a>.</p>
+        </div>
+      </div>
+      
+
+      <div id="login-modal" class="lmodal">
+        <div class="lmodal-content">
+          <span class="lclose">&times;</span>
+          <img src="https://i.ibb.co/T211xz8/Picsart-23-04-22-02-56-15-612.png" alt="Logo">
+          <h2 class="lmodal-title">Welcome back</h2>
+          <form>
+          
+            <div class="lform-group">
+              <label for="login_email">Email</label>
+              <input type="email" id="login_email" name="login_email">
+            </div>
+           
+            <div class="lform-group">
+              <label for="enter-password">Password</label>
+              <input type="password" id="enter-password" name="enter-password">
+            </div>
+            <div class = "lform-group">
+              <button type="button" id="loginb">LOGIN</button>
+          
+            </div>
+            
+          </form>
+          <p>Don't have a Hypercast account? <a href="#" id="signup-link"> Create one</a>.</p>
+        </div>
+      </div>
+      
+      
+    
+    
+    <script src="auth.js"></script>
+    <script src="Atharv/my-project/app.js"></script>
+  <footer>
+    <p>&copy; 2023 HYPER'S EMPIRE</p>
+  </footer>
+</body>
+</html>
+
+

@@ -1,0 +1,701 @@
+@import url('https://fonts.googleapis.com/css2?family=Monda&display=swap');
+
+/* Body Styles */
+body {
+  
+  font-family: 'Monda', Bold  ;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+ 
+}
+
+.bg {
+  height: 150vh;
+  background: radial-gradient(circle at 10% 20%, rgb(10, 10, 12) 0%, rgb(4, 5, 20) 81.3%);
+  box-shadow: inset 0 0 200px #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+  
+
+
+/* Navigation Styles */
+nav {
+  background: #0C090A;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow:0 0 4px 2px #a4a4a4;
+}
+
+nav img {
+    width: 200px;
+    height: auto;
+    margin-left: -20px;
+    background-color: transparent;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin-left: -200px;
+  margin-right: 350px;
+}
+
+nav a {
+  position: relative;
+  color: #626262;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+nav a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0%;
+  height: 3px;
+  background-color: #fff;
+  transition: width 0.2s;
+  transform-origin: center bottom;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+nav a:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  animation: glow 1s ease-in-out infinite alternate;
+  opacity: 0;
+}
+
+@keyframes glow {
+  from {
+    opacity: 0;
+    transform: scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+}
+
+
+/*#######*/
+.search-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  margin-top: -600px;
+}
+
+.search-container h1 {
+  font-size: 4rem;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px 0px 8px #fff;
+}
+
+.search-container input[type="text"] {
+  width: 80%;
+  margin-left: 60px;
+  height: 60px;
+  font-size: 2rem;
+  text-align: center;
+  border: none;
+  border-radius: 30px;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px #fff;
+  transition: all 0.3s ease;
+}
+
+.search-container input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0px 0px 20px #00eaff;
+}
+
+.search-container input[type="submit"] {
+  width: 10%;
+  height: 60px;
+  margin-left: 20px;
+
+  font-size: 2rem;
+  text-align: center;
+  border: none;
+  border-radius: 30px;
+  background-color: #00eaff;
+  color: #fff;
+  box-shadow: 0px 0px 20px #00eaff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+}
+
+.search-container input[type="submit"]:hover {
+  background-color: #fff;
+  color: #00eaff;
+}
+
+.search-container button[type="submit"] {
+  background-color: #2020f1;
+  margin-left: 220px;
+  margin-top:20px;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: 'Monda', Bold;
+  color: #c1bebe;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-transform: uppercase;
+}
+
+.search-container button[type="submit"]:hover {
+  background-color: #1ac594;
+  color: #2020f1;
+}
+
+
+
+.big-image {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 10rem);
+  background-color: #040404;
+  background: radial-gradient(circle at 10% 20%, rgb(10, 10, 12) 0%, rgb(4, 5, 20) 81.3%);
+  box-shadow: 0 0 20px 10px rgba(255, 0, 0, 0.2);
+}
+
+
+.big-image img {
+  width: 60%;
+  max-width: 500px;
+  filter: brightness(75%);
+  position: relative;
+ 
+}
+
+.big-image img {
+  width: 60%;
+  max-width: 500px;
+  filter: brightness(80%);
+  position: relative;
+
+}
+
+
+.big-image h1 {
+  color: #fff;
+  font-size: 3rem;
+
+  margin-top: -5rem; /* changed */
+  text-align: center;
+  text-shadow: 0 0 20px #fff;
+  filter: brightness(70%);
+  animation: shadow-pulse 3s infinite;
+}
+
+@keyframes shadow-pulse {
+  0% {
+    text-shadow: 0 0 10px #fff;
+  }
+  50% {
+    text-shadow: 0 0 70px #fff;
+  }
+  100% {
+    text-shadow: 0 0 100px #fff;
+  }
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 25vh;
+  width: 70%;
+  background-color: #111;
+  margin-top: 16rem;
+  box-shadow: 0 0 10px 5px #fff; /* add a white box-shadow to the container */
+  animation: glow 1s ease-in-out infinite; 
+}
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 1px 0.5px #fff; /* start with a white box-shadow */
+  }
+  50% {
+    box-shadow: 0 0 2px 1px #fff; /* increase the size and opacity of the box-shadow */
+  }
+  100% {
+    box-shadow: 0 0 1px 0.5px #fff; /* return to the original box-shadow */
+  }
+}
+.image-container img {
+  max-width: 40%;
+  max-height: 150%;
+  filter: brightness(100%);
+  margin-top: 0rem;
+}
+
+.image-text {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: -1rem;
+  color: #fff;
+}
+
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: #232323;
+  background: radial-gradient(circle at 10% 20%, rgb(10, 10, 12) 0%, rgb(4, 5, 20) 81.3%);
+  align-items: center;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.close {
+  position: absolute;
+  margin-right: 20px;
+  top: 0;
+  right: 0;
+  color: #d3d3d3;
+  font-size: 40px;
+  font-weight: regular;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #b63131;
+  
+}
+
+.modal-title {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: -100px;
+}
+
+.modal-content img {
+  display: block;
+  margin: 0 auto 30px;
+  width: 80%;
+  max-width: 200px;
+  height: auto;
+  margin-top: -80px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.form-group label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.form-group input[type="text"], .form-group input[type="email"], .form-group input[type="password"] {
+  width: 110%;
+  padding: 10px;
+  background-color:#c1bebe ;
+  border:10px solid #171818;
+  border-radius: 5px;
+  border-bottom: 5px solid rgb(4, 5, 20);
+  margin-bottom: 5px;
+  font-size: 15px;
+  text-align:left;
+}
+
+
+#signupb {
+  background-color: #2020f1;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: 'Monda', Bold  ;
+  color: #c1bebe;
+  font-weight:bolder;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-transform: uppercase;
+}
+
+
+#signupb:hover {
+  background-color:#1ac594;
+  color:  #2020f1;
+}
+
+
+
+
+.form-group img{
+  
+  margin-top: 35px;
+}
+
+p {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+#login-link {
+ 
+  color: rgb(36, 36, 255);
+  font-size: 20px;
+}
+
+/*login modal*/
+
+.lmodal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+.lmodal-content {
+  background-color: #232323;
+  background: radial-gradient(circle at 10% 20%, rgb(10, 10, 12) 0%, rgb(4, 5, 20) 81.3%);
+  align-items: center;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lclose {
+  position: absolute;
+  margin-right: 20px;
+  top: 0;
+  right: 0;
+  color: #d3d3d3;
+  font-size: 40px;
+  font-weight: regular;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.lclose:hover {
+  color: #b63131;
+  
+}
+
+.lmodal-title {
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: -100px;
+}
+
+.lmodal-content img {
+  display: block;
+  margin: 0 auto 30px;
+  width: 80%;
+  max-width: 200px;
+  height: auto;
+  margin-top: -80px;
+}
+
+.lform-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.lform-group label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.lform-group input[type="text"], .lform-group input[type="email"], .lform-group input[type="password"] {
+  width: 110%;
+  padding: 10px;
+  background-color:#c1bebe ;
+  border:10px solid #171818;
+  border-radius: 5px;
+  border-bottom: 5px solid rgb(4, 5, 20);
+  margin-bottom: 5px;
+  font-size: 15px;
+  text-align:left;
+}
+
+
+#loginb {
+  background-color: #2020f1;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: 'Monda', Bold  ;
+  color: #c1bebe;
+  font-weight:bolder;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-transform: uppercase;
+}
+
+
+#loginb:hover {
+  background-color:#1ac594;
+  color:  #2020f1;
+}
+
+
+
+
+.lform-group img{
+  
+  margin-top: 35px;
+}
+
+p {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+#signup-link {
+ 
+  color: rgb(36, 36, 255);
+  font-size: 20px;
+}
+
+
+/* CSS for the side nav bar */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 80px;
+  left: 0;
+  background: radial-gradient(circle at 10% 20%, rgb(12, 10, 12) 0%, rgb(21, 4, 14) 81.3%);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  border-right: 2px solid transparent;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #717171;
+  display: block;
+  transition: 0.3s;
+  border-bottom: 1px solid transparent;
+  
+}
+
+.sidenav a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0%;
+  height: 3px;
+  background-color: #fff;
+  transition: width 0.2s;
+  transform-origin: center bottom;
+}
+
+.sidenav a:hover {
+  color: #fff;
+}
+
+.sidenav a:hover::before {
+  width: 100%;
+}
+
+.sidenav a:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  animation: glow 1s ease-in-out infinite alternate;
+  opacity: 0;
+}
+
+/* .sidenav a:hover {
+  color:  #626262;
+  border-bottom: 1px solid  #626262;;
+} */
+
+.sidenav a.active {
+  color:  #fff;;
+  border-bottom: 1px solid white;;
+}
+
+.sidenav.active {
+  width: 250px;
+  border-right: 2px solid #ccc;
+}
+
+/* .sidenav.active {
+  width: 250px;
+  border-right: 2px solid #ccc; /* border when menu is open 
+  border-bottom: 1px solid #fff;
+} */
+
+/* .sidenav a {
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+  display: block;
+  border-bottom: 2px solid transparent; /* Add a transparent border-bottom to all nav links 
+}
+
+.sidenav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-bottom: 2px solid white; /* Add a white border-bottom on hover 
+}*/
+
+.sidenav a.selected {
+  border-bottom: 2px solid white;
+} 
+
+/* .sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+} */
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* CSS for the menu icon */
+.menu-icon {
+  display: block;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #e7e7e7;
+  margin: 8px 0;
+  transition: transform 0.2s ease-in-out;
+}
+
+.menu-icon.active span:nth-child(1) {
+  transform: translateY(12px) rotate(45deg);
+}
+
+.menu-icon.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.active span:nth-child(3) {
+  transform: translateY(-12px) rotate(-45deg);
+}
+
+
+
